@@ -1,0 +1,61 @@
+<h3>Nama Saya adalah {{ name }}</h3>
+
+<!-- <p>jumlah karakter nama saya adalah {{ name.length }}</p>
+<p>test doang {{ name.toUpperCase() }}</p> -->
+
+<input type="text" value="Vishwas" [id]="myId">
+<input type="text" value="Vishwas" [disabled]="isDisabled">
+<!-- Kurung Siku  -->
+<!-- Berguna untuk Memasukkan variable yang bukan String, alias Number, Array, Object, Boolean, Any, any many more -->
+
+<!-- Class Binding -->
+<h2 [class.text-danger]="hasError">Richard Laurent</h2>
+<h2 [ngClass]="messageClass">NgClasses</h2>
+<!-- ngClass -->
+<!-- Bisa mencheck Nilai True dari sebuah Object / Array -->
+
+<!-- Style Binding -->
+<h2 [style.color]="hasError ? 'red' : 'blue'">Ini Style Binding!</h2>
+<h2 [ngStyle]="titleStyles">This is ngStyle</h2>
+<!-- ngStyle -->
+<!-- Bisa menerapkan semua style dalam bentuk Object dari 1 Object Variable -->
+
+<!-- Event Binding -->
+<button (click)="onClick($event)">Submit</button>
+<h2>{{ greetingMessage }}</h2>
+<!-- (click) -->
+<!-- Salah satu Event Binding yang sering digunakan -->
+<!-- parameter $event dapat menangkap semua event yang terjadi di Window -->
+<br>
+<!-- Template Reference Variables -->
+<input #myInput type="text">
+<button (click)="logMessage(myInput.value)">Generate</button>
+
+<br>
+<br>
+
+<!-- Two Way Binding -> using ngModel -->
+<input [(ngModel)]="myName" type="text">
+<p>{{ myName }}</p>
+
+<h2 *ngIf="displayName; else elseBlock">
+  CodeEvolution
+</h2>
+
+<ng-template #elseBlock>
+  <h2>
+    Name is Hidden
+  </h2>
+</ng-template>
+
+<div *ngIf="displayName; then thenBlock; else elseBlock"></div>
+
+<ng-template #thenBlock>
+  <h2>Successful</h2>
+</ng-template>
+
+<br> <!-- Break - Space-->
+
+<ng-template #elseBlock>
+  <h2>Hidden</h2>
+</ng-template>
