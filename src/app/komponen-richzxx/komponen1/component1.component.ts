@@ -31,6 +31,11 @@ export class Component1Component implements OnInit {
   greetingMessage: string = "";
   myName: string = "";
   displayName: boolean = true;
+  myColor: string = "red";
+
+  public colors: string[] = [
+    "red", "blue", "green", "yellow"
+  ];
 
   constructor() { 
 

@@ -1,0 +1,21 @@
+<!-- Special Component untuk Component Interaction -->
+
+<h2>This is a Special Component!</h2>
+
+<!-- Masuk ke Part Pipes Expressions -->
+<p>My Name is {{ name | uppercase }}</p>
+<p>My Name is {{ name | lowercase }}</p>
+<p>{{ message | titlecase }}</p>
+<p>The part of {{ name | slice:3:6 }}</p>
+<p>Person JSON : {{ person | json }}</p>
+
+<p>Date : {{ date }}</p>
+<p>Short Date : {{ date | date:"short"}}</p>
+<p>Short Date : {{ date | date:"shortDate"}}</p>
+<p>Short Date : {{ date | date:"shortTime"}}</p>
+
+<p>medium Date : {{ date | date:"mediumDate"}}</p>
+<p>medium Date : {{ date | date:"mediumTime"}}</p>
+
+
+<router-outlet></router-outlet>

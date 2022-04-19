@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-
 @Component({
   selector: 'komponen2',
   templateUrl: './component2.component.html',
